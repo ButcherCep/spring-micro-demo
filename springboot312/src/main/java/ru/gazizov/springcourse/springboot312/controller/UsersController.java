@@ -1,4 +1,4 @@
-package ru.gazizov.springcourse.springmvcboot.controller;
+package ru.gazizov.springcourse.springboot312.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,8 +9,9 @@ import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import ru.gazizov.springcourse.springmvcboot.model.User;
-import ru.gazizov.springcourse.springmvcboot.service.UserService;
+import ru.gazizov.springcourse.springboot312.model.User;
+import ru.gazizov.springcourse.springboot312.service.UserService;
+
 
 @Controller
 @RequestMapping("/users")
@@ -33,7 +34,7 @@ public class UsersController {
     }
     @GetMapping("/new")
     public String newUser(@ModelAttribute("user") User user) {
-        return "newUser";
+        return "pages/newUser";
     }
     @PostMapping()
     public String createUser(@ModelAttribute("user")  User user) {
